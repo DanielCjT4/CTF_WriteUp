@@ -12,7 +12,7 @@ The decompiler showed two embedded buffers being turned into textures:
 
 ```c
 IMG_Init(2);
-lVar11 = SDL_RWFromMem(&GQ3mHqOK6n, GQ3mHqOK6nl);
+lVar11 = SDL_RWFromMem(GQ3mHqOK6n, GQ3mHqOK6nl);
 if ((lVar11 != 0) && (lVar11 = IMG_Load_RW(lVar11,1), lVar11 != 0)) {
 	local_118 = SDL_CreateTextureFromSurface(local_250,lVar11);
 	SDL_FreeSurface(lVar11);
@@ -51,28 +51,9 @@ After opening the extracted images, one of them was just a cat picture, and the 
 
 The important lesson here was to stop treating the game like a normal gameplay challenge. Once I followed the asset-loading path in Ghidra, the hidden resources were easy to dump and inspect.
 
-## Findings & Screenshots (interim)
-
-I captured several screenshots during static analysis that support the extraction steps above. They show the decompiler listing, the labeled embedded buffers (`GQ3mHqOK6n`, `US0JFpkLGR`), and the nearby image header bytes (JPEG/PNG signatures).
-
-Please upload the final extracted image file when you're ready and name it `asset_flag.png` (or tell me the exact filename). For now, drop the screenshots into the same folder with these filenames so I can embed and confirm them in the writeup:
-
-- `screenshot_ghidra_listing.png` — Ghidra decompiler & listing view
-- `screenshot_data_headers.png` — hex view showing image magic bytes and symbol labels
-- `screenshot_symbols.png` — symbol tree view pointing to `GQ3mHqOK6n` / `US0JFpkLGR`
-
-Once you upload `asset_flag.png`, I'll add it inline and mark the extraction step complete.
-
----
-
 ## Extracted Images
 
-I can embed the two extracted assets here for convenience. Place the two files extracted from the binary into the same folder as this writeup and use the filenames below so the images render in the markdown viewer.
-
-- `asset_jpeg.jpg` — JPEG extracted from `GQ3mHqOK6n` (Level 4 image)
-- `asset_png.png` — PNG extracted from `US0JFpkLGR` (Level 5 image)
-
-Once those files are present in the `images/` subfolder, these images will render inline:
+The two assets embedded in the binary were extracted and saved in the `images/` folder. Both are included below.
 
 ![Level 4 hidden image](images/asset_jpeg.jpg)
 
@@ -80,8 +61,6 @@ Once those files are present in the `images/` subfolder, these images will rende
 
 ### Findings screenshots
 
-![Ghidra listing screenshot](images/findings.png)
-
-![Data headers screenshot](images/findings (2).png)
-
-![Symbol tree screenshot](images/findings (3).png)
+![Ghidra Screenshot](images/findingsss.png)
+(images/findingss.png)
+(images/findings.png)
