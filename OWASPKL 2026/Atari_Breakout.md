@@ -62,5 +62,5 @@ The two assets embedded in the binary were extracted and saved in the `images/` 
 ### Findings screenshots
 
 ![Ghidra Screenshot](images/findingsss.png)
-(images/findingss.png)
-(images/findings.png)
+![](images/findingss.png)
+![](images/findings.png)
